@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasklist.TaskController">
+   <children>
+      <VBox prefHeight="492.0" prefWidth="882.0">
+         <children>
+            <TableView fx:id="tableV" prefHeight="362.0" prefWidth="866.0">
+              <columns>
+                <TableColumn fx:id="taskCol" prefWidth="75.0" text="Task" />
+                <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="scoreCol" prefWidth="91.0" text="Max score" />
+                  <TableColumn fx:id="compDateCol" prefWidth="113.0" text="Сompletion date" />
+                  <TableColumn fx:id="commentCol" prefWidth="133.0" text="Comment" />
+                  <TableColumn fx:id="setScoreCol" minWidth="0.0" prefWidth="142.0" text="Score" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="71.0" prefWidth="882.0">
+               <children>
+                  <VBox prefHeight="57.0" prefWidth="182.0">
+                     <children>
+                        <Label text="Task">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="taskTF" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="151.0">
+                     <children>
+                        <Label text="Date">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dateTF" prefHeight="25.0" prefWidth="139.0" />
+                     </children></VBox>
+                  <VBox prefHeight="100.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="188.0" text="Max score" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="scoreTF" />
+                     </children></VBox>
+                  <Button mnemonicParsing="false" onAction="#onCLickAdd" prefHeight="36.0" prefWidth="94.0" text="Add" textAlignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#onClickDelete" text="Delete" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="87.0" prefWidth="185.0">
+                     <children>
+                        <Label text="Completion date">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="compDateTF" prefHeight="25.0" prefWidth="144.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="87.0" prefWidth="151.0">
+                     <children>
+                        <Label text="Comment">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="commentTF" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="87.0" prefWidth="186.0">
+                     <children>
+                        <Label text="Score">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="setScoreTF" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#onClickRate" prefHeight="34.0" prefWidth="96.0" text="Rate" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
