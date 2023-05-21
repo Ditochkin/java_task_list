@@ -162,6 +162,9 @@ public class TaskController {
     protected void onClickRate() {
         Task selectedItem = tableV.getSelectionModel().getSelectedItem();
 
+        if (selectedItem == null)
+            return;
+
         var i = 0;
         for (i = 0; i < taskList.size(); i++)
         {

@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasklist.TaskController">
+<AnchorPane prefHeight="492.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasklist.TaskController">
    <children>
-      <VBox prefHeight="492.0" prefWidth="882.0">
+      <VBox prefHeight="492.0" prefWidth="761.0">
          <children>
-            <TableView fx:id="tableV" prefHeight="362.0" prefWidth="866.0">
+            <TableView fx:id="tableV" prefHeight="339.0" prefWidth="746.0">
               <columns>
-                <TableColumn fx:id="taskCol" prefWidth="75.0" text="Task" />
-                <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
-                  <TableColumn fx:id="scoreCol" prefWidth="91.0" text="Max score" />
-                  <TableColumn fx:id="compDateCol" prefWidth="113.0" text="Сompletion date" />
-                  <TableColumn fx:id="commentCol" prefWidth="133.0" text="Comment" />
-                  <TableColumn fx:id="setScoreCol" minWidth="0.0" prefWidth="142.0" text="Score" />
+                <TableColumn fx:id="taskCol" prefWidth="178.0" text="Task" />
+                <TableColumn fx:id="dateCol" prefWidth="96.0" text="Date" />
+                  <TableColumn fx:id="scoreCol" text="Max score" />
+                  <TableColumn fx:id="compDateCol" prefWidth="112.0" text="Сompletion date" />
+                  <TableColumn fx:id="commentCol" prefWidth="196.0" text="Comment" />
+                  <TableColumn fx:id="setScoreCol" minWidth="0.0" prefWidth="98.0" text="Score" />
               </columns>
             </TableView>
             <HBox prefHeight="71.0" prefWidth="882.0">
@@ -25,8 +26,14 @@
                         <Label text="Task">
                            <font>
                               <Font size="18.0" />
-                           </font></Label>
-                        <TextField fx:id="taskTF" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></Label>
+                        <TextField fx:id="taskTF" prefHeight="26.0">
+                           <VBox.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </VBox.margin></TextField>
                      </children>
                   </VBox>
                   <VBox prefHeight="100.0" prefWidth="151.0">
@@ -35,22 +42,40 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
                         </Label>
-                        <TextField fx:id="dateTF" prefHeight="25.0" prefWidth="139.0" />
+                        <TextField fx:id="dateTF" prefHeight="26.0" prefWidth="139.0">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin></TextField>
                      </children></VBox>
                   <VBox prefHeight="100.0" prefWidth="187.0">
                      <children>
                         <Label prefHeight="27.0" prefWidth="188.0" text="Max score" textAlignment="CENTER">
                            <font>
                               <Font size="18.0" />
-                           </font></Label>
-                        <TextField fx:id="scoreTF" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin></Label>
+                        <TextField fx:id="scoreTF" prefHeight="26.0">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin></TextField>
                      </children></VBox>
-                  <Button mnemonicParsing="false" onAction="#onCLickAdd" prefHeight="36.0" prefWidth="94.0" text="Add" textAlignment="CENTER" />
-                  <Button mnemonicParsing="false" onAction="#onClickDelete" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#onCLickAdd" prefHeight="26.0" prefWidth="65.0" text="Add" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="15.0" top="26.5" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#onClickDelete" prefHeight="26.0" prefWidth="65.0" text="Delete">
+                     <HBox.margin>
+                        <Insets left="80.0" top="26.0" />
+                     </HBox.margin></Button>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="75.0" prefWidth="761.0">
                <children>
                   <VBox prefHeight="87.0" prefWidth="185.0">
                      <children>
@@ -58,8 +83,14 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
                         </Label>
-                        <TextField fx:id="compDateTF" prefHeight="25.0" prefWidth="144.0" />
+                        <TextField fx:id="compDateTF" prefHeight="26.0" prefWidth="144.0">
+                           <VBox.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </VBox.margin></TextField>
                      </children>
                   </VBox>
                   <VBox prefHeight="87.0" prefWidth="151.0">
@@ -68,21 +99,36 @@
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
                         </Label>
-                        <TextField fx:id="commentTF" />
+                        <TextField fx:id="commentTF" prefHeight="26.0">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin></TextField>
                      </children>
                   </VBox>
                   <VBox prefHeight="87.0" prefWidth="186.0">
                      <children>
-                        <Label text="Score">
+                        <Label prefHeight="27.0" prefWidth="170.0" text="Score">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
                         </Label>
-                        <TextField fx:id="setScoreTF" />
+                        <TextField fx:id="setScoreTF" prefHeight="26.0">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin></TextField>
                      </children>
                   </VBox>
-                  <Button mnemonicParsing="false" onAction="#onClickRate" prefHeight="34.0" prefWidth="96.0" text="Rate" />
+                  <Button mnemonicParsing="false" onAction="#onClickRate" prefHeight="26.0" prefWidth="65.0" text="Rate">
+                     <HBox.margin>
+                        <Insets left="15.0" top="26.5" />
+                     </HBox.margin></Button>
                </children>
             </HBox>
          </children>
